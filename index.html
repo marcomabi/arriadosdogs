@@ -6,7 +6,10 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div>
     <h1>Arriadogs</h1>
+    <img src="arriadoslogo.jpg" alt="arriadoslogo">
+    </div>
 
     <div id="main-container">
         <div id="button-container">
@@ -39,16 +42,21 @@
         </div>
 
         <div id="order-list">
-            <h2>Order List</h2>
+            <h2>Articulos</h2>
             <ul id="selected-products"></ul>
-            <button id="button-orders" onclick="clearOrder()">Borrar Todo</button>
-            <button id="button-orders" onclick="completeOrder()">Finalizar orden</button>
-            <button id="save-orders" onclick="confirmSaveAllOrders()">Resumen de ordenes</button>
+
             <p>Total: $<span id="total-price">0.00</span></p>
             <label for="amount-paid">Pagado: $</label>
             <input type="number" id="amount-paid" oninput="calculateChange()">
             <p>Cambio: $<span id="change">0.00</span></p>
         </div>
+
+        <div id="botones">
+            <button id="button-orders" onclick="clearOrder()">Borrar Todo</button>
+            <button id="button-orders" onclick="completeOrder()">Finalizar orden</button>
+            <button id="save-orders" onclick="confirmSaveAllOrders()">Corte</button>
+        </div>
+
     </div>
 
     <div id="summary">

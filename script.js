@@ -41,6 +41,9 @@ function removeItem(name) {
 
 function clearOrder() {
     order = [];
+    document.getElementById('amount-paid').value = '';
+    document.getElementById('change').textContent = '0.00';
+    
     updateOrderList();
 }
 

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Arriadogs</h1>
+
+    <div id="main-container">
+        <div id="button-container">
+            <div class="column">
+                <h3>Hot Dog</h3>
+                <button onclick="addItem('Hot Dog Clasico', 37.00)">Hot Dog Clasico</button>
+                <button onclick="addItem('Hot Dog Doble', 47.00)">Hot Dog Doble</button>
+                <button onclick="addItem('Hot Dog Embarazado', 60.00)">Hot Dog Embarazado</button>
+                <button onclick="addItem('Chilidogo', 55.00)">Chilidogo</button>
+            </div>
+            <div class="column">
+                <h3>Salchichas</h3>
+                <button onclick="addItem('Normal preparada', 20.00)">Normal preparada</button>
+                <button onclick="addItem('Chile Preparado', 30.00)">Chile Preparado</button>
+                <button onclick="addItem('Embarazada', 35.00)">Embarazada</button>
+                <button onclick="addItem('Sola', 10.00)">Sola</button>
+            </div>
+            <div class="column">
+                <h3>Papas</h3>
+                <button onclick="addItem('Orden de papas', 30.00)">Orden de papas</button>
+                <button onclick="addItem('Salchipapas normales', 60.00)">Salchipapas normales</button>
+                <button onclick="addItem('Salchipapas Embarazadas', 80.00)">Salchipapas Embarazadas</button>
+                <button onclick="addItem('Salchipapas Rancheras', 75.00)">Salchipapas Rancheras</button>
+            </div>
+            <div class="column">
+                <h3>Extras</h3>
+                <button onclick="addItem('Aguas', 20.00)">Aguas</button>
+                <button onclick="addItem('Soda', 20.00)">Soda</button>
+            </div>
+        </div>
+
+        <div id="order-list">
+            <h2>Order List</h2>
+            <ul id="selected-products"></ul>
+            <button id="button-orders" onclick="clearOrder()">Borrar Todo</button>
+            <button id="button-orders" onclick="completeOrder()">Finalizar orden</button>
+            <button id="save-orders" onclick="confirmSaveAllOrders()">Resumen de ordenes</button>
+            <p>Total: $<span id="total-price">0.00</span></p>
+            <label for="amount-paid">Pagado: $</label>
+            <input type="number" id="amount-paid" oninput="calculateChange()">
+            <p>Cambio: $<span id="change">0.00</span></p>
+        </div>
+    </div>
+
+    <div id="summary">
+        <h2>Resumen de ventas</h2>
+        <ul id="sales-summary"></ul>
+        <p>Ventas totales: $<span id="total-sales">0.00</span></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

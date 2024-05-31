@@ -1,0 +1,143 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    padding: 20px;
+    max-width: 100%;
+    max-height: 100%;
+    overflow: hidden;
+}
+
+h1 {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+#main-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+#button-container {
+    display: flex;
+    gap: 10px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+button {
+    padding: 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #ffbf00;
+    color: #000;
+    transition: background-color 0.3s, transform 0.3s;
+    width: 150px;
+    height: 150px;
+}
+
+button:hover {
+    background-color: #e0ac00;
+    transform: scale(1.05);
+}
+
+#order-list {
+    background-color: #1a1a1a;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    width: 35%;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+
+#selected-products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+#selected-products li {
+    list-style: none;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#selected-products li button {
+    margin-left: 10px;
+    background-color: #dc3545;
+    padding: 5px;
+    font-size: 12px;
+    width: auto;
+    height: 20px;
+    border: 5px;
+    cursor: pointer;
+}
+
+#selected-products li button:hover {
+    background-color: #c82333;
+}
+
+button#save-orders {
+    background-color: #dc3545;
+    color: #fff;
+    margin-top: 10px;
+    width: auto;
+    height: auto;
+}
+
+button#button-orders {
+    background-color: aqua;
+    width: auto;
+    height: auto;
+}
+
+button#save-orders:hover {
+    background-color: #c82333;
+}
+
+input {
+    width: 100%;
+    padding: 5px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid #555;
+    background-color: #333;
+    color: #fff;
+}
+
+#summary {
+    margin-top: 20px;
+    background-color: #1a1a1a;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    border-radius: 8px;
+}
+
+#sales-summary {
+    list-style: none;
+    padding: 0;
+}
+
+#sales-summary li {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+}
